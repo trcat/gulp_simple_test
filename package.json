@@ -1,0 +1,22 @@
+{
+  "name": "gulp_simple_test",
+  "version": "1.0.0",
+  "description": "一个简单的测试，以学习 gulp 的使用方法",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trcat/gulp_simple_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trcat/gulp_simple_test/issues"
+  },
+  "homepage": "https://github.com/trcat/gulp_simple_test#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
