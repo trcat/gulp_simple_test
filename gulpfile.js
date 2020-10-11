@@ -1,26 +1,19 @@
 const { src, dest, watch, series } = require("gulp");
 const babel = require("gulp-babel");
-const sourcemaps = require("gulp-sourcemaps");
-const concat = require("gulp-concat");
 const del = require("delete");
-const uglify = require("gulp-uglify");
-const rename = require("gulp-rename");
+const browserify = require("browserify");
 
 function clearDist(cb) {
-  return del(["dist/*.js"], cb);
+  return del(["dist/*.js", "dist/*.map"], cb);
 }
 
 function defaultTask() {
-  return src("src/*.js")
-    .pipe(sourcemaps.init())
+  return browserify({
+    entries: "src/index.js",
+  })
+    .bundle()
+    .pipe(src("src/*.js"))
     .pipe(babel({ presets: ["@babel/env"] }))
-    .pipe(concat("all.js"))
-    .pipe(dest("dist/"))
-    .pipe(
-      uglify({})
-    )
-    .pipe(rename({ extname: ".min.js" }))
-    .pipe(sourcemaps.write("."))
     .pipe(dest("dist/"));
 }
 
