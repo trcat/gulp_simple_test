@@ -1,5 +1,3 @@
-var text = "Hello Gulp!";
-
-var name = "DayDay";
+const text = "Hello Gulp!";
 
 console.log(text);
