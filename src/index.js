@@ -1,4 +1,4 @@
-import '@babel/polyfill'
+// import '@babel/polyfill'
 import Component from "./component";
 import Test from "./test";
 
