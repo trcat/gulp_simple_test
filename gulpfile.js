@@ -15,7 +15,7 @@ function clearDist(cb) {
   return del([distJavaScriptGlob], cb);
 }
 
-function defaultTask() {
+function javascript() {
   return src(entry)
     .pipe(
       rollup(
@@ -48,4 +48,4 @@ function defaultTask() {
 
 // watch("src/*.js", defaultTask);
 
-exports.default = series(clearDist, defaultTask);
+exports.default = series(clearDist, javascript);
