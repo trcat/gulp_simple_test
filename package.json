@@ -21,6 +21,10 @@
     "@babel/preset-env": "^7.11.5",
     "delete": "^1.1.0",
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0"
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5"
   }
 }

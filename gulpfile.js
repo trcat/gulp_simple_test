@@ -1,15 +1,23 @@
-const { src, dest, watch, series } = require("gulp");
+const { src, dest, series } = require("gulp");
 const babel = require("gulp-babel");
 const del = require("delete");
+const concat = require("gulp-concat");
+
+const distJavaScriptPath = "dist/js/";
+const srcJavaScriptPath = "src/";
+const distJavaScriptGlob = `${distJavaScriptPath}*.js`;
+const srcJavaScriptGlob = `${srcJavaScriptPath}*.js`;
+const distJavaScriptName = "index.js";
 
 function clearDist(cb) {
-  return del(["dist/*.js", "dist/*.map"], cb);
+  return del([distJavaScriptGlob], cb);
 }
 
 function defaultTask() {
-  return src("src/*.js")
+  return src(srcJavaScriptGlob)
     .pipe(babel({ presets: ["@babel/env"] }))
-    .pipe(dest("dist/"));
+    .pipe(concat(distJavaScriptName))
+    .pipe(dest(distJavaScriptPath));
 }
 
 // watch("src/*.js", defaultTask);

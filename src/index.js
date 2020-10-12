@@ -1,3 +1,1 @@
-const text = "Hello Gulp!";
-
-console, log(test());
+new Component().init('body')
