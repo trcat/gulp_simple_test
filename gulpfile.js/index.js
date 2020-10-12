@@ -15,6 +15,7 @@ if (process.env.NODE_ENV === "development") {
   watch(srcImageGlob, series(cleanImageTask, transformImage));
 }
 
+exports.imagemin = series(cleanImageTask, transformImage);
 exports.default = series(
   parallel(cleanCSSTask, cleanJavaScriptTask, cleanImageTask),
   parallel(transformCSS, transformJavaScript, transformImage)

@@ -11,8 +11,8 @@ const srcCSSGlob = `${srcCSSPath}*.css`;
 
 const distImagePath = "dist/image/";
 const srcImagePath = "src/image/";
-const distImageGlob = `${distImagePath}*`;
-const srcImageGlob = `${srcImagePath}*`;
+const distImageGlob = `${distImagePath}**/*`;
+const srcImageGlob = `${srcImagePath}**/*`;
 
 module.exports = {
   distJavaScriptPath,
