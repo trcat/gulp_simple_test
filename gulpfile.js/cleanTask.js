@@ -1,4 +1,4 @@
-const { distJavaScriptGlob, distCSSGlob } = require("./glob");
+const { distJavaScriptGlob, distCSSGlob, distImageGlob } = require("./glob");
 const del = require("delete"); // 删除指定 glob 的内容
 
 function cleanJavaScriptTask(cb) {
@@ -9,5 +9,12 @@ function cleanCSSTask(cb) {
   return del([distCSSGlob], cb);
 }
 
-exports.cleanJavaScriptTask = cleanJavaScriptTask;
-exports.cleanCSSTask = cleanCSSTask;
+function cleanImageTask(cb) {
+  return del([distImageGlob], cb);
+}
+
+module.exports = {
+  cleanJavaScriptTask,
+  cleanCSSTask,
+  cleanImageTask,
+};

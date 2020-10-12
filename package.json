@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "set NODE_ENV=development&&gulp",
-    "build": "set NODE_ENV=product&&gulp"
+    "build": "set NODE_ENV=production&&gulp"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "delete": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.1.1",
