@@ -1,7 +1,5 @@
-const { src } = require("gulp");
-
 const distJavaScriptPath = "dist/js/";
-const srcJavaScriptPath = "src/";
+const srcJavaScriptPath = "src/js/";
 const distJavaScriptGlob = `${distJavaScriptPath}*.js`;
 const entry = `${srcJavaScriptPath}index.js`;
 
