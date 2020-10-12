@@ -6,7 +6,7 @@ class Component {
 
     targetNode && targetNode.appendChild(div);
 
-    return targetNode();
+    return Promise.resolve(targetNode);
   }
   generateDiv() {
     const div = document.createElement("div");
@@ -15,3 +15,5 @@ class Component {
     return div;
   }
 }
+
+export default Component

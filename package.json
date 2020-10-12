@@ -19,10 +19,15 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "delete": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1"
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-uglify": "^3.0.2",
+    "rollup": "^2.29.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5"
