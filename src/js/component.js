@@ -19,15 +19,15 @@ class Component {
     return div;
   }
   generateFlexDiv() {
-    const div = document.createElement('div');
-    div.classList.add('flex-wrap');
-    
+    const div = document.createElement("div");
+    div.classList.add("flex-wrap");
+
     for (let i = 0; i < 2; i++) {
-      const item = document.createElement('div')
-      item.classList.add('flex-item');
-      div.appendChild(item)
+      const item = document.createElement("div");
+      item.classList.add("flex-item");
+      div.appendChild(item);
     }
-    return div
+    return div;
   }
 }
 

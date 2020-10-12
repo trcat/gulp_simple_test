@@ -16,16 +16,7 @@ module.exports = function () {
             commonjs(),
             nodeResolve(),
             babel({
-              presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    targets: {
-                      browsers: "last 2 versions, > 1%, ie >= 9",
-                    },
-                  },
-                ],
-              ],
+              presets: [["@babel/preset-env"]],
             }),
           ],
         },
