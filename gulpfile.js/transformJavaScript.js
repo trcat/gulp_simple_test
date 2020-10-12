@@ -36,4 +36,4 @@ module.exports = function () {
     )
     .pipe(uglify())
     .pipe(dest(distJavaScriptPath));
-}
+};
