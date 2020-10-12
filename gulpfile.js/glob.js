@@ -1,6 +1,7 @@
 const distJavaScriptPath = "dist/js/";
 const srcJavaScriptPath = "src/js/";
 const distJavaScriptGlob = `${distJavaScriptPath}*.js`;
+const srcJavaScriptGlob = `${srcJavaScriptPath}*.js`;
 const entry = `${srcJavaScriptPath}index.js`;
 
 const distCSSPath = "dist/css/";
@@ -12,6 +13,7 @@ module.exports = {
   distJavaScriptPath,
   srcJavaScriptPath,
   distJavaScriptGlob,
+  srcJavaScriptGlob,
   entry,
   distCSSPath,
   srcCSSPath,
