@@ -1,5 +1,5 @@
 node_modules
 dist/js
 dist/css
-dist/images
+dist/image
 dist/*.html
