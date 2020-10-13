@@ -14,6 +14,11 @@ const srcImagePath = "src/image/";
 const distImageGlob = `${distImagePath}**/*`;
 const srcImageGlob = `${srcImagePath}**/*`;
 
+const distHtmlPath = "dist/";
+const srcHtmlPath = "";
+const distHtmlGlob = `${distHtmlPath}*.html`;
+const srcHtmlGlob = `${srcHtmlPath}*.html`;
+
 module.exports = {
   distJavaScriptPath,
   srcJavaScriptPath,
@@ -28,4 +33,8 @@ module.exports = {
   srcImagePath,
   distImageGlob,
   srcImageGlob,
+  distHtmlPath,
+  srcHtmlPath,
+  distHtmlGlob,
+  srcHtmlGlob,
 };
