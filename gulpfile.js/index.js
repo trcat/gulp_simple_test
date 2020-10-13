@@ -26,5 +26,6 @@ if (process.env.NODE_ENV === "development") {
 exports.imagemin = series(cleanImageTask, transformImage);
 exports.default = series(
   parallel(cleanCSSTask, cleanJavaScriptTask, cleanImageTask, cleanHtmlTask),
-  parallel(transformCSS, transformJavaScript, transformImage, transformHtml)
+  parallel(transformCSS, transformJavaScript, transformImage),
+  transformHtml
 );
