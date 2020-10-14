@@ -10,12 +10,14 @@ const {
 
 const sources = src([distCSSGlob, distJavaScriptGlob], { read: false });
 const headSources = src("dist/lib/*", { read: false });
-const headConfig = { name: "head" };
 
 module.exports = function () {
   return src(srcHtmlGlob)
-    .pipe(inject(sources))
-    .pipe(inject(headSources, headConfig))
+    .pipe(dest(distHtmlPath))
+    .pipe(inject(sources, { relative: true, addPrefix: "." }))
+    .pipe(
+      inject(headSources, { name: "head", relative: true, addPrefix: "." })
+    )
     .pipe(
       htmlmin({
         collapseWhitespace: true,
